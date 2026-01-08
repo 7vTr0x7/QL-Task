@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
   title: { type: String, required: true },
@@ -7,4 +7,4 @@ const postSchema = new mongoose.Schema({
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
 
-module.exports = mongoose.model("Post", postSchema);
+export const Post = mongoose.model("Post", postSchema);
