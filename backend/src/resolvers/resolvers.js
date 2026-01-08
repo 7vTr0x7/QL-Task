@@ -1,6 +1,6 @@
-import { User } from "../models/user";
-import { Post } from "../models/post";
-import { Comment } from "../models/comment";
+import { User } from "../models/user.js";
+import { Post } from "../models/post.js";
+import { Comment } from "../models/comment.js";
 
 export const resolvers = {
   Query: {
