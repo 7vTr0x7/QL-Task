@@ -15,7 +15,14 @@ export const GET_POST_BY_ID = gql`
   query GetPostById($id: ID!) {
     post(id: $id) {
       ...PostFragment
-      comments
+      comments {
+        id
+        content
+        author {
+          id
+          username
+        }
+      }
     }
   }
   ${POST_FRAGMENT}
