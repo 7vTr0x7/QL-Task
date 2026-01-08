@@ -20,3 +20,15 @@ export const GET_USER_BY_ID = gql`
   }
   ${USER_FRAGMENT}
 `;
+
+export const GET_POSTS_BY_UDER_ID = gql`
+  query GetPostsByUserId($userId: ID!) {
+    user(id: $userId) {
+      posts {
+        id
+        title
+        content
+      }
+    }
+  }
+`;
