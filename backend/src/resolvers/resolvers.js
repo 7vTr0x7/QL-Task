@@ -62,16 +62,16 @@ export const resolvers = {
   },
 
   User: {
-    posts: (parent) => Post.find({ author: parent.id }),
+    posts: async (parent) => await Post.find({ author: parent.id }),
   },
 
   Post: {
-    author: (parent) => User.findById(parent.author),
-    comments: (parent) => Comment.find({ post: parent.id }),
+    author: async (parent) => await User.findById(parent.author),
+    comments: async (parent) => await Comment.find({ post: parent.id }),
   },
 
   Comment: {
-    author: (parent) => User.findById(parent.author),
-    post: (parent) => Post.findById(parent.post),
+    author: async (parent) => await User.findById(parent.author),
+    post: async (parent) => await Post.findById(parent.post),
   },
 };
