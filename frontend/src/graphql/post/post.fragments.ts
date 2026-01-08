@@ -5,10 +5,6 @@ export const POST_FRAGMENT = gql`
     id
     content
     title
-    comments {
-      id
-      content
-    }
     author {
       id
       username
