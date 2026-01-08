@@ -5,7 +5,13 @@ export const POST_FRAGMENT = gql`
     id
     content
     title
-    comments
-    author
+    comments {
+      id
+      content
+    }
+    author {
+      id
+      username
+    }
   }
 `;
