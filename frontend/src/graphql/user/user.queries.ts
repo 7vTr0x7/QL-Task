@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import { USER_FRAGMENT } from "./user.fragments";
 
 export const GET_USERS = gql`
-  query getUsers {
+  query GetUsers {
     users {
       ...UserFragment
     }
@@ -11,7 +11,7 @@ export const GET_USERS = gql`
 `;
 
 export const GET_USER_BY_ID = gql`
-  query getUserById($id: ID!) {
+  query GetUserById($id: ID!) {
     user(id: $id) {
       ...UserFragment
 
