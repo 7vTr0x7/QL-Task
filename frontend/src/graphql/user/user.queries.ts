@@ -32,3 +32,6 @@ export const GET_POSTS_BY_UDER_ID = gql`
     }
   }
 `;
+
+
+// get

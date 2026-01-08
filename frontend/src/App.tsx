@@ -1,10 +1,10 @@
 import React from "react";
-import UsersList from "./components/user/UsersList";
+import Views from "./components/Views/Views";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <UsersList />
+    <div className="p-20">
+      <Views />
     </div>
   );
 };
