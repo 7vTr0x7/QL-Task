@@ -18,3 +18,11 @@ export const UPDATE_POST = gql`
   }
   ${POST_FRAGMENT}
 `;
+
+export const GET_COMMENTS = gql`
+  query GetComments($postId: ID!) {
+    post(postId: $postId) {
+      comments
+    }
+  }
+`;
