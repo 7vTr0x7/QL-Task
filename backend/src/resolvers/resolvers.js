@@ -12,6 +12,20 @@ export const resolvers = {
   },
 
   Mutation: {
+    createUser: async (_, { username, email }) => {
+      const user = await User.create({ username, email });
+      return user;
+    },
+
+    createPost: async (_, { authorId, title, content }) => {
+      const post = await Post.create({
+        title,
+        content,
+        author: authorId,
+      });
+      return post;
+    },
+
     updateUser: async (_, { id, input }) => {
       const user = await User.findByIdAndUpdate(
         id,
